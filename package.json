@@ -1,0 +1,25 @@
+{
+  "name": "apprestapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apw516/apprestapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "node",
+    "js"
+  ],
+  "author": "agylpw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apw516/apprestapi/issues"
+  },
+  "homepage": "https://github.com/apw516/apprestapi#readme"
+}
