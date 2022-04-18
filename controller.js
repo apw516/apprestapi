@@ -54,7 +54,6 @@ exports.tambahmahasiswa = function (req, res) {
 };
 
 //update data berdasarkan id
-
 exports.ubahdatamahasiswa = function (req, res) {
   var id = req.body.id_mahasiswa;
   var nim = req.body.nim;
@@ -69,6 +68,22 @@ exports.ubahdatamahasiswa = function (req, res) {
         console.log(error);
       } else {
         response.ok("Data berhasil diedit", res);
+      }
+    }
+  );
+};
+
+//delete data mahasiswa with id
+exports.hapusmahasiswa = function (req, res) {
+  var id = req.body.id_mahasiswa;
+  connection.query(
+    "delete from mahasiswa where id_mahasiswa = ?",
+    [id],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok("Data berhasil dihapus", res);
       }
     }
   );
