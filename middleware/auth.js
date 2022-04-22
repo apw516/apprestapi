@@ -11,13 +11,13 @@ exports.registrasi = function (req, res) {
   var post = {
     username: req.body.username,
     email: req.body.email,
-    passwotd: md5(req.body.password),
+    password: md5(req.body.password),
     role: req.body.role,
     tanggal_daftar: new Date(),
     //array yang menangkap data dari inputan postman dll
   };
 
-  var query = "SELECT email from ?? WHERE";
+  var query = "SELECT email from ?? WHERE ?? = ?";
   var table = ["user","email",post.email];
 
   query= mysql.format(query,table);
@@ -28,8 +28,8 @@ exports.registrasi = function (req, res) {
          //cek email apakah sudah terdaftar
          if(rows.length == 0){
              //jka email belum terdaftar
-             var query ="INSERT INTO?? SET ??";
-             var table = ["user"];
+             var query ="INSERT INTO ?? SET ?";
+             var table = ["user",];
              //insert ke tabel user dengan inputan post dari user
              query = mysql.format(query,table);
              connection.query(query,post,function(error,rows){

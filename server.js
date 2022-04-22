@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 var routes = require('./routes');
 routes(app);
 //daftarkan menu routes dari index
-app.use('/auth',require('./middleware'))
+app.use('/auth',require('./middleware'));
  app.listen(3000,() => {
      console.log('server starter on port 300');
  });
