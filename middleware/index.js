@@ -8,5 +8,5 @@ router.post('/api/v1/register',auth.registrasi);
 router.post('/api/v1/login',auth.login);
 
 //alamat yang perlu authorization
-router.get('/api/v1/dashboard',verifikasi(2),auth.halamandashboard)
+router.get('/api/v1/dashboard',verifikasi(),auth.halamandashboard)
 module.exports = router;

@@ -101,5 +101,5 @@ exports.login = function (req,res){
 }
 
 exports.halamandashboard = function(req,res){
-    response.ok("halaman dashboard hanya untuk role 2")
+    response.ok("halaman dashboard hanya untuk role 2",res)
 }
